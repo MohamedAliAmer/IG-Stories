@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct IG_StoriesApp: App {
-    let persistenceController = PersistenceController.shared
+    let persistenceController = PersistenceController()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainAppView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
